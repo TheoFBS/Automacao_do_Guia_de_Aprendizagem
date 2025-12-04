@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automação Guia de Aprendizagem</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Campos do Guia de Aprendizagem</h1>
+        
+        <form id="jsonForm">
+            <div class="form-group">
+                <label for="professor"> PROFESSOR <span class="required">*</span></label>
+                <input type="text" id="professor" name="professor" required placeholder="Digite o nome do professor">
+            </div>
+            <div class="form-group">
+                <label for="disciplina"> DISCIPLINA/COMPONENTE/IF <span class="required">*</span></label>
+                <select id="disciplina" name="disciplina" required>
+                    <option value="">Selecione a Disciplina</option>
+                    <option value="Arte">Arte</option>
+                    <option value="Arte e Mídias Digitais">Arte e Mídias Digitais</option>
+                    <option value="Biologia">Biologia</option>
+                    <option value="Biotecnologia">Biotecnologia</option>
+                    <option value="Ciências">Ciências</option>
+                    <option value="Educação Financeira">Educação Financeira</option>
+                    <option value="Educação Física">Educação Física</option>
+                    <option value="Empreendedorismo">Empreendedorismo</option>
+                    <option value="Filosofia">Filosofia</option>
+                    <option value="Filosofia e Sociedade Moderna">Filosofia e Sociedade Moderna</option>
+                    <option value="Geopolítica">Geopolítica</option>
+                    <option value="Geografia">Geografia</option>
+                    <option value="Física">Física</option>
+                    <option value="História">História</option>
+                    <option value="Liderança">Liderança</option>
+                    <option value="Língua Inglesa">Língua Inglesa</option>
+                    <option value="Língua Portuguesa">Língua Portuguesa</option>
+                    <option value="Oratória">Oratória</option>
+                    <option value="Projeto de Convivência">Projeto de Convivência</option>
+                    <option value="Projeto de Vida">Projeto de Vida</option>
+                    <option value="Química">Química</option>
+                    <option value="Química Aplicada">Química Aplicada</option>
+                    <option value="Matemática">Matemática</option>
+                    <option value="Redação e Leitura">Redação e Leitura</option>
+                    <option value="Robótica - PEI 9h">Robótica - PEI 9h</option>
+                    <option value="Sociologia">Sociologia</option>
+                    <option value="Tecnologia e Inovação">Tecnologia e Inovação</option>
+                    <option value="Tecnologia e Inovação PEI 7h e 9h">Tecnologia e Inovação PEI 7h e 9h</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="serie">ANO/SÉRIE <span class="required">*</span></label>
+                <select id="serie" name="serie" required>
+                    <option value="">Selecione um ano ou série</option>
+                    <option value="1° ano">1º ano</option>
+                    <option value="2° ano">2º ano</option>
+                    <option value="3° ano">3º ano</option>
+                    <option value="4° ano">4º ano</option>
+                    <option value="5° ano">5º ano</option>
+                    <option value="6° ano">6º ano</option>
+                    <option value="7° ano">7º ano</option>
+                    <option value="8° ano">8º ano</option>
+                    <option value="9° ano">9º ano</option>
+                    <option value="1ª série">1ª série</option>
+                    <option value="2ª série">2ª série</option>
+                    <option value="3ª série">3ª série</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="turma"> TURMA <span class="required">*</span></label>
+                <input type="text" id="turma" name="turma" required placeholder="X° ano y">
+            </div>
+            <div class="form-group">
+                <label for="bimestre">BIMESTRE <span class="required">*</span></label>
+                <select id="bimestre" name="bimestre" required>
+                    <option value="">Selecione o Bimestre</option>
+                    <option value="1°">1°</option>
+                    <option value="2°">2°</option>
+                    <option value="3°">3°</option>
+                    <option value="4°">4°</option>
+                </select>
+            </div>
+<!--
+            <div class="form-group">
+                <label for="atuacao">ÁREA DE ATUAÇÃO</label>
+                <textarea id="atuacao" name="atuacao" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="cgpac"> CGPAC <span class="required">*</span></label>
+                <input type="text" id="cgpac" name="cgpac" required>
+            </div>
+            <div class="form-group">
+                <label for="justificativa">JUSTIFICATIVA DO CONTEÚDO</label>
+                <textarea id="justificativa" name="justificativa" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="aproximacao">APROXIMAÇÃO COM A REALIDADE DO ESTUDANTE</label>
+                <textarea id="aproximacao" name="aproximacao" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="avaliacao"> AVALIAÇÃO BIMESTRAL <span class="required">*</span></label>
+                <input type="text" id="avaliacao" name="avaliacao" required>
+            </div>
+            <div class="form-group">
+                <label for="pei">PERÍODO DE ESTUDOS INTENSIVOS</label>
+                <textarea id="pei" name="pei" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="metodologias">METODOLOGIAS</label>
+                <textarea id="metodologias" name="metodologias" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="ambientes">AMBIENTES DE APRENDIZAGEM</label>
+                <textarea id="ambientes" name="ambientes" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="criterios">CRITÉRIOS DE AVALIAÇÃO</label>
+                <textarea id="criterios" name="criterios" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="fontes">FONTES DE PESQUISA PARA O ESTUDANTE</label>
+                <textarea id="fontes" name="fontes" required></textarea>
+            </div>
+-->
+            <div class="button-group">
+                <button type="submit" class="btn-submit">Baixar Documento</button>
+                <button type="reset" class="btn-reset">Limpar</button>
+            </div>
+        </form>
+
+        <div id="jsonPreview" class="json-preview">
+            <h3>📄 Preview do JSON</h3>
+            <pre id="jsonOutput"></pre>
+            <button id="downloadBtn" class="download-btn">⬇️ Baixar JSON</button>
+        </div>
+    </div>
+
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+</html>
