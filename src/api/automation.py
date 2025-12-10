@@ -1,6 +1,11 @@
 import logging
 from .google_sheets import Sheets
 from .word import Word
+from config.settings import (
+    ID_FUNDAMENTAL_I,
+    ID_FUNDAMENTAL_II,
+    ID_MEDIO
+)
 
 logger = logging.getLogger(__name__)
 
@@ -19,13 +24,13 @@ class Automation:
         ss = None
         
         if serie in ['1° ano','2° ano','3° ano','4° ano','5° ano','1º ano','2º ano','3º ano','4º ano','5º ano']:
-            self.sheet_id = "1LSEerPaaokPQHR3Ov0miPCQqUGUyumobVUWIv49y4No"
+            self.sheet_id = ID_FUNDAMENTAL_I
             ss = 1
         elif serie in ['6° ano','7° ano','8° ano','9° ano','6º ano','7º ano','8º ano','9º ano']:
-            self.sheet_id = "1LoQ3ZMVQRlJnqG6y_z9QTlfKIPsZsTPzNjNA3Ht_j7w"
+            self.sheet_id = ID_FUNDAMENTAL_II
             ss = 2
         else:
-            self.sheet_id = "1iGmcLIVsrxEBpMiK0q8BZcSA-6Y_u5fNW0_Tck_AdQ8"
+            self.sheet_id = ID_MEDIO
             ss = 3
         logger.info(f"Alterando planilha {ss}")
         
